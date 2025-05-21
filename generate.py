@@ -25,7 +25,7 @@ for i in range(1, 17):
     path = PATH / "provas" / f"prova-{i}"
     (path / "lox").mkdir(exist_ok=True, parents=True)
 
-    # Cria diretórios de saídas
+    # Cria diretórios de saidas
     path.mkdir(exist_ok=True)
 
     # Copia arquivos na raiz dos templates
@@ -86,7 +86,7 @@ for i in range(1, 17):
     for name in ["ast.py", "transformer.py", "grammar.lark"]:
         (key, src) = transform((orig / name).read_text())
         (dest / name).write_text(src)
-        assert key not in KEYS, f"Chave {key} já existe"
+        assert key not in KEYS, f"Chave {key} ja existe"
         KEYS[key] = i
 
 json.dump(KEYS, open(PATH / "templates/keys.json", "w"), indent=2)
