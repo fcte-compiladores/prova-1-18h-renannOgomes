@@ -1,0 +1,7 @@
+provas/gabarito/
+templates/
+.mypy_cache/
+.pytest_cache/
+.venv/
+.generate-lock
+__pycache__/
